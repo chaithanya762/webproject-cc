@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> REGISTER </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form class="signup-form" action="/register" method="post">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>BE A PART OF ENVIROMODE</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname"name="first_name" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" name="last_name" class="form-input" placeholder="enter your last name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" name="email"class="form-input" placeholder="enter your email" required="required">
+        </div>
+
+        <!-- Passwrod and confirm password -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="password" class="label-title">Password *</label>
+            <input type="password" id="password" name="password" class="form-input" placeholder="enter your password" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="phone No." class="label-title">Phone No. *</label>
+            <input type="tel" class="form-input" id="Phone" name="phoneNo" placeholder="xxx-xxx-xxxx" required="required" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}">
+          </div>
+        </div>
+
+        <!-- Aadhar -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="Aadhar No." class="label-title">Aadhar No.*</label>
+            <input type="tel" class="form-input" id="Phone"name="AadharNo" placeholder="xxxx-xxxx-xxxx" required="required" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
+
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Activities to volunteer</label>
+            <div >
+              <label><input type="checkbox" value="Web">waste management </label>
+              <label><input type="checkbox" value="iOS">planting trees</label>
+              <label><input type="checkbox" value="Andriod">educate others</label>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Income -->
+
+<div class="form-group left">
+
+            <label for="experience" class="label-title">Donations ( small token of appreciation and support)</label>
+            <input type="range" min="5" max="100" step="5"  value="0" id="experience" name="range" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
+            <span id="range-label">5K</span>
+
+        </div>
+
+        <!-- Profile picture and Age -->
+
+
+          <div class="form-group">
+            <label for="experience" class="label-title">D.O.B</label>
+            <input type="datetime-local" name="datetimelocal" class="form-input" style="  font-size: 17px;
+              box-sizing: border-box;
+              width: 100%;
+              height: 34px;
+              padding-left: 10px;
+              padding-right: 10px;
+              color: #333333;
+              text-align: left;
+              border: 1px solid #d6d6d6;
+              border-radius: 4px;
+              background: white;
+              outline: none; ">
+          </div>
+
+
+        <!-- Bio -->
+        <div class="form-group">
+          <label for="choose-file" class="label-title">previous experience with volunteering</label>
+          <textarea class="form-input" rows="6" cols="60" name="experience"style="height:auto  font-size: 17px;
+            box-sizing: border-box;
+            width: 100%;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #333333;
+            text-align: left;
+            border: 1px solid #d6d6d6;
+            border-radius: 4px;
+            background: white;
+            outline: none;"></textarea>
+        </div>
+      </div>
+
+      <!-- form-footer -->
+
+      <div class="form-footer">
+        <sapn>* required</span>
+        <button type="submit" class="btn">REGISTER</button>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label -->
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>
+
+  </body>
+</html>
